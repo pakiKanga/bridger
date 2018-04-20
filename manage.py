@@ -4,8 +4,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from flask_script import Manager, Server
 from flask_migrate import MigrateCommand
-from MeetupPoint import app
-from MeetupPoint import createSession
+from bridger import app
+from bridger import createSession
 
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)

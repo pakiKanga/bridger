@@ -5,7 +5,7 @@ import urllib.request
 import math
 import numpy as np
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash
-from MeetupPoint import app, db
+from bridger import app, db
 from createSession.models import UserSession
 from locations.models import UserLocation
 import os, datetime, json
@@ -31,15 +31,13 @@ def set_session(session_id):
 #Returns a session if it exists, else None
 def return_session(session_id):
 	session['session_token'] = session_id
-	curr_session = UserSession.query.filter_by(session_id=session_id).first()
-	return curr_session
+	return session['session_token']
 
 @app.route('/joinSession/<string:session_id>')
 def joinSession(session_id):
 	curr_session = return_session(session_id)
 	if curr_session:
-		locations = UserLocation.query.filter_by(session_id=session_id).all()
-		return render_template('enter_locations.html', session=curr_session, locations=locations, key=app.config['GOOGLE_API_KEY'])
+		return render_template('enter_locations.html')
 	else:
 		flash("Session does not exist.")
 		return redirect(url_for('index'))
@@ -48,9 +46,6 @@ def joinSession(session_id):
 def createSession():
 	session_id = id_generator(12)
 	curr_date = datetime.datetime.now()
-	user_session = UserSession(session_id, curr_date)
-	db.session.add(user_session)
-	db.session.commit()
 	set_session(session_id)
 	return redirect(url_for('joinSession', session_id=session_id))
 

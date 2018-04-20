@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from MeetupPoint import setup
+from bridger import setup
 
 # creating an instance of the Flask app
 app = Flask(__name__)

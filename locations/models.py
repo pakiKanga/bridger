@@ -1,4 +1,4 @@
-from MeetupPoint import db
+from bridger import db
 import datetime
 
 class UserLocation(db.Model):

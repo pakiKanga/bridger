@@ -1,4 +1,4 @@
-from MeetupPoint import db
+from bridger import db
 
 # Creating a model for applications
 class User(db.Model):
