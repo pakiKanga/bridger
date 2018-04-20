@@ -1,47 +1,28 @@
-# MeetupPoint
-An application that gets the locations of a group of users, and finds optimal meetup points.
+# Bridger
+Required Use Cases:
+* Find relevant subjects for a student
+* Sell textbooks
+* Buy textbooks
 
 ## Requirements
-Install all the dependencies
+First, ensure you have virtualenv installed. This will be used to isolate the python environment and have consistency amongst all members. The project uses Python 3. For initial setup, do the following.
 
 ```
+cd <bridger-location> //Where all the files and folders are
+virtualenv venv
 pip install -r requirements.txt
 ```
-
-## Database
-This step requires that a database to be running locally or on a remote server.
-Create your own setup.py file as such:
-
+If you're on a UNIX OS, run:
 ```
-import os
-
-SECRET_KEY = *YOUR_SECRET_KEY*
-DEBUG=True
-SQLALCHEMY_TRACK_MODIFICATIONS = True
-
-# database configuration settings
-DB_USERNAME = 'USER_NAME'
-DB_PASSWORD = 'PASSWORD'
-DATABASE_NAME = 'DBNAME'
-DB_HOST = os.getenv('IP','HOSTNAME')
-DB_URI = "mysql+pymysql://%s:%s@%s/%s" % (DB_USERNAME, DB_PASSWORD, DB_HOST, DATABASE_NAME)
-SQLALCHEMY_DATABASE_URI = DB_URI
-
+source venv\bin\activate
 ```
-
-Run the following commands to intialise and migrate the database.
-
+If you're on a Windows OS, run:
 ```
-python manage.py db init
-python manage.py db migrate
-
-# if updating from previous revision
-python manage.py db upgrade
+venv\Scripts\activate
 ```
-
 ## Running
 
-Run the server and enjoy.
+Run the server.
 
 ```
 python manage.py runserver
