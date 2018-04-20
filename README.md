@@ -1,3 +1,4 @@
+
 # Bridger
 Required Use Cases:
 * Find relevant subjects for a student
@@ -12,6 +13,11 @@ cd <bridger-location> //Where all the files and folders are
 virtualenv venv
 pip install -r requirements.txt
 ```
+
+## Running
+
+How to run the server.
+
 If you're on a UNIX OS, run:
 ```
 source venv\bin\activate
@@ -20,10 +26,15 @@ If you're on a Windows OS, run:
 ```
 venv\Scripts\activate
 ```
-## Running
-
-Run the server.
-
+----
+Finally, run:
 ```
 python manage.py runserver
 ```
+
+To stop the server:
+```
+ctrl+c
+deactivate
+```
+Remember to always reactivate virtualenv before running the application.
