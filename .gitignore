@@ -1,0 +1,8 @@
+venv/*
+env/*
+sqlalchemy/*
+**/__pycache__/*
+setup.py
+*.pyo
+*.pyc
+migrations/*

@@ -1,0 +1,27 @@
+<!--This file is the base template -->
+
+
+{% include "header.html" %}
+
+{% block content %}
+<main>
+
+<div class="background-image"></div>
+<div class="content center">
+        {% include 'flash_messages.html' %}
+
+	<h2 class="header white-text darken"> Connect with friends, discover new places</h2>
+  <a href="{{url_for('createSession')}}" class="btn-large center">Create Session</a>
+  <a href="#joinSession" class="btn-large center">Join Session</a>
+
+
+</div>
+</main>
+
+
+
+{% endblock %}
+
+
+
+

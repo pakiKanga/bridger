@@ -1,0 +1,245 @@
+
+.give-margin {
+  margin-top: 53px;   
+}
+
+
+
+#professional-div {  
+  display: block;
+  text-align: center;
+  background-image: url(../images/earth_splash.jpeg);
+  height: 380px;
+  width:100%;
+}
+
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-image: url(../images/earth_splash.jpeg);
+  width: 100%;
+  height: 100%;
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+
+  animation: animatedBackground 40s linear infinite;
+}
+
+#background-map {
+  height: 100%; 
+  width: 100%; 
+  position:absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: -1; /* Set z-index to 0 as it will be on a layer below the contact form */
+  opacity: 0.5;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.content {
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+input[type=text]:disabled {
+  color: rgba(38,50,56 ,0.75);
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.26);
+}
+
+.section-header {
+  font-size: 14px;
+  font-weight: bolder;
+  color: black;
+
+}
+
+.sidenav-header {
+  font-size: 14px;
+  font-weight: bolder;
+  color: rgba(224,224,224 ,1);
+
+}
+
+.result-header {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.info-header {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+ .row-full{
+ width: 100vw;
+ position: relative;
+ margin-left: -50vw;
+ height: 100px;
+ margin-top: 100px;
+ left: 50%;
+}
+
+
+#map {
+ height: 438px;
+ width: 100%;
+ box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section1 {
+ margin-top: 25px;
+ background: lightblue;
+}
+
+.rounded {
+  border-radius: 15px;
+}
+
+.give-spacing {
+ margin-left: auto;
+ margin-right: auto;
+ padding: 32px 48px 0px 48px;
+}
+
+.share-button {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flex-display {
+  display:flex;
+}
+
+.go-flex {
+  flex:1;
+}
+
+.fix-margin {
+  margin-left: 20px;
+}
+
+      .side-nav {
+        background-color: rgba(69,90,100 ,1);
+        margin-top: 64px;
+
+      }
+
+      .side-nav li > a {
+        color: rgba(224,224,224 ,1);
+      }
+
+      .side-nav .user-view, .side-nav .userView {
+        position: relative;
+        padding: 32px 32px 0;
+        margin-bottom: 8px;
+      }
+
+  /*    .side-nav .user-view .background, .side-nav .userView .background {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+      }*/
+
+      .side-nav .user-view .email, .side-nav .userView .email {
+        padding-bottom: 16px;
+        font-weight: 400;
+      }
+
+      .side-nav .user-view>a, .side-nav .userView>a {
+        height: auto;
+        padding: 0;
+      }
+      .name, .side-nav .userView .name {
+        margin-top: 16px;
+        font-weight: 500;
+      }
+
+  #slide-out > li > div > ul > li {
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+/* #user_list {
+    border: 1px solid rgba(120,144,156 ,1);
+  }
+  #user_list > li {
+        background-color: rgba(69,90,100 ,1);
+        border-bottom: 1px solid rgba(120,144,156 ,1);
+        color: white;
+  }
+*/
+ 
+ nav {
+  background-color: rgba(229,57,53 ,0);
+ }
+
+nav .brand-logo {
+  font-weight: 400;  
+  color: black;
+}
+
+nav ul a {
+  color: black;
+}
+
+.min-height {
+  min-height: 380px !important; 
+}
+
+@media only screen and (min-width: 993px) {
+
+.offset-lhalf {
+    margin-left: 2.3333333333% !important;
+
+}
+}
+
+@media only screen and (max-width: 601px) {
+
+.mobile-margin {
+    margin-top: 20px;
+  }
+}
+
+
+.div-center {
+  margin-left: 11% !important;
+}
+
+.nav-wrapper.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+
+i.icon-blue {
+    color: blue;
+}
+
