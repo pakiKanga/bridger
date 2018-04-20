@@ -38,3 +38,11 @@ ctrl+c
 deactivate
 ```
 Remember to always reactivate virtualenv before running the application.
+
+## Important Files and Folders
+ - templates
+	 - Contains all the html files.
+- static
+	- Contains all the css, js and media.
+- views.py
+	- Contains all the back-end code for each module and renders the relevant HTML contents.
