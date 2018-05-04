@@ -239,7 +239,27 @@ nav ul a {
   transition: background-color 200ms linear;
 }
 
-i.icon-blue {
-    color: blue;
+.icon-black {
+    color: #000;
+}
+
+.lightGreen {
+    background-color: #79B791;
+}
+
+.darkGreen {
+    background-color: #3E5641;
+}
+
+.red {
+    background-color: #A24936;
+}
+
+.orange {
+    background-color: #D35135;
+}
+
+.black {
+    background-color: #282B28;
 }
 
