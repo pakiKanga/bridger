@@ -9,10 +9,10 @@
  <h2>Your Past Subjects</h2>
 
   <ul class="collapsible">
-    {% for x in past_subs %}
+    {% for x in past_subjects %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">add</i>{{x.sub_name}}</div>
-      <div class="collapsible-body"><span>Completed in {{x.sub_year}}</span></div>
+      <div class="collapsible-header"><i class="material-icons">add</i>{{x.name}} - {{x.subject_code}} </div>
+      <div class="collapsible-body"><span>Completed in {{x.year_completed}}</span></div>
     </li>
     {% endfor %}
   </ul>
@@ -20,10 +20,12 @@
    <h2>Current Subjects</h2>
 
   <ul class="collapsible">
+     {% for x in curr_subjects %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">add</i>ELEC3610</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-header"><i class="material-icons">add</i>{{x.name}} - {{x.subject_code}} </div>
+      <div class="collapsible-body"><span>Completed in {{x.year_completed}}</span></div>
     </li>
+    {% endfor %}
 
   </ul>
 
