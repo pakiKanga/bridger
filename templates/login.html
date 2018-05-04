@@ -1,0 +1,40 @@
+<!--This file is the base template -->
+
+
+{% include "header.html" %}
+
+{% block content %}
+<main>
+
+<div class="content center">
+        {% include 'flash_messages.html' %}
+
+  <div class="row">
+    <div class="col s12">
+      <h2 class="header darken"> Buy, sell, rent textbooks</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <img src="static/images/logo.png" width="400px" height="400px">
+    </div>
+  </div>
+
+
+  
+  
+  <a href="{{url_for('sellBook')}}" class="btn-large center lightGreen">Sell Book</a>
+  <a href="{{url_for('buyBook')}}" class="btn-large center lightGreen">Buy Book</a>
+
+
+</div>
+</main>
+
+
+
+{% endblock %}
+
+
+
+

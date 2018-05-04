@@ -21,6 +21,9 @@ def buyBook():
 @app.route('/sellBook')
 def sellBook():
 	return render_template('sell_resource.html')
+@app.route('/login')
+def login():
+	return render_template('login_page.html')
 	
 @app.route("/")
 @app.route("/index")
