@@ -18,4 +18,4 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 # importing all of the views from the various modules
-from createSession import views
+from BridgerViews import views

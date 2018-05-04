@@ -6,12 +6,22 @@ import math
 import numpy as np
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash
 from bridger import app, db
-from createSession.models import UserSession
+from BridgerViews.models import UserSession
 from locations.models import UserLocation
 import os, datetime, json
 
 ID = "AIzaSyD3Grw77GNz2fnPKnU23JWQaoXjeU97iT8"
 
+@app.route('/showSubjects')
+def showSubjects():
+	return render_template('subject_list.html')
+@app.route('/buyBook')
+def buyBook():
+	return render_template('buy_resource.html')
+@app.route('/sellBook')
+def sellBook():
+	return render_template('sell_resource.html')
+	
 @app.route("/")
 @app.route("/index")
 def index():
@@ -42,12 +52,13 @@ def joinSession(session_id):
 		flash("Session does not exist.")
 		return redirect(url_for('index'))
 
-@app.route('/createSession')
-def createSession():
+@app.route('/BridgerViews')
+def BridgerViews():
 	session_id = id_generator(12)
 	curr_date = datetime.datetime.now()
 	set_session(session_id)
 	return redirect(url_for('joinSession', session_id=session_id))
+
 
 @app.route('/calculateConvergence')
 def calculateConvergence():

@@ -21,14 +21,14 @@
   <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="{{url_for('index')}}" class="brand-logo">Meetup Point</a>
+      <a href="{{url_for('index')}}" class="brand-logo">Bridger</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons icon-blue">menu</i></a>
 
       <ul class="right hide-on-med-and-down">
         <li><a href="{{url_for('index')}}"><i class="material-icons left">home</i>HOME</a></li>
-        <li><a href="{{url_for('createSession')}}"><i class="material-icons left">add_circle</i>CREATE</a></li>
-        <li><a href="#joinSession"><i class="material-icons left">people</i>JOIN</a></li>
-        <li><a href="#shareSession"><i class="material-icons left">share</i>SHARE</a></li>
+        <li><a href="{{url_for('showSubjects')}}"><i class="material-icons left">book</i>SUBJECTS</a></li>
+        <li><a href="{{url_for('sellBook')}}"><i class="material-icons left">people</i>SELL</a></li>
+        <li><a href="{{url_for('buyBook')}}"><i class="material-icons left">people</i>BUY</a></li>
 
       </ul>
 
@@ -40,11 +40,10 @@
 </header>
 
    <ul class="side-nav" id="mobile-demo">
-        <li><a href="{{url_for('index')}}"><i class="material-icons left">home</i>HOME</a></li>
-        <li><a href="{{url_for('createSession')}}"><i class="material-icons left">add_circle</i>CREATE</a></li>
-        <li><a href="#joinSession"><i class="material-icons left">people</i>JOIN</a></li>
-        <li><a href="#shareSession"><i class="material-icons left">share</i>SHARE</a></li>
-
+       <li><a href="{{url_for('index')}}"><i class="material-icons left">home</i>HOME</a></li>
+        <li><a href="{{url_for('showSubjects')}}"><i class="material-icons left">add_circle</i>SUBJECTS</a></li>
+        <li><a href="#joinSession"><i class="material-icons left">people</i>SELL</a></li>
+        <li><a href="#joinSession"><i class="material-icons left">people</i>BUY</a></li>
        
      </ul>
 
@@ -59,8 +58,6 @@
       <a href="#" id="join_session" class="modal-action modal-close waves-effect waves-green btn-flat">Let's Go</a>
     </div>
   </div>
-
-<!--     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
- -->          
+         
 
 {% endblock %}
