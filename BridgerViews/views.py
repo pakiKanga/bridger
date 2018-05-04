@@ -12,8 +12,15 @@ import os, datetime, json
 
 ID = "AIzaSyD3Grw77GNz2fnPKnU23JWQaoXjeU97iT8"
 
+@app.route('/syncSubjects')
+def syncSubjects():
+	return None
+
 @app.route('/showSubjects')
 def showSubjects():
+	past_subjects = { subject
+
+	}
 	return render_template('subject_list.html')
 @app.route('/buyBook')
 def buyBook():
