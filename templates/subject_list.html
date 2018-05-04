@@ -3,36 +3,38 @@
 
 {% block content %}
 <main>
+<div class="row">
 <div class="container rounded z-depth-1">
- <h1 class="center">Subject List</h1>
+ <h1 class="center">Your Subjects</h1>
  <h2>Your Past Subjects</h2>
 
   <ul class="collapsible">
+    {% for x in past_subjects %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">add</i>COMP2129</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-header"><i class="material-icons">add</i>{{x.name}} - {{x.subject_code}} </div>
+      <div class="collapsible-body"><span>Completed in {{x.year_completed}}</span></div>
     </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">add</i>INFO1103</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">add</i>INFO21120</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    {% endfor %}
   </ul>
 
-   <h2>Your Current Subjects</h2>
+   <h2>Current Subjects</h2>
 
   <ul class="collapsible">
+     {% for x in curr_subjects %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">add</i>ELEC3610</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-header"><i class="material-icons">add</i>{{x.name}} - {{x.subject_code}} </div>
+      <div class="collapsible-body"><span>Completed in {{x.year_completed}}</span></div>
     </li>
+    {% endfor %}
 
   </ul>
-        
+
  </div>
+ </div>
+   <div class="row center">
+  <a class="waves-effect waves-light btn-large">Sync Subjects</a>
+  <a class="waves-effect waves-light btn-large">Add Manually</a>
+  </div>
 </main>
 <!-- Modal Structure -->
 

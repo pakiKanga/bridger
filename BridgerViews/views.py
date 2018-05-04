@@ -11,10 +11,61 @@ from locations.models import UserLocation
 import os, datetime, json
 
 ID = "AIzaSyD3Grw77GNz2fnPKnU23JWQaoXjeU97iT8"
+past_subjects = [
+ {
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2016,
+   'prescribed_textbook': 'Dummys Guide to Programming'
+ },{
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2016,
+   'prescribed_textbook': 'Dummys Guide to Programming'
+ },{
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2016,
+   'prescribed_textbook': 'Dummys Guide to Programming'
+ },{
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2016,
+   'prescribed_textbook': 'Dummys Guide to Programming'
+ },
+]
+
+curr_subjects = [
+ {
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2018,
+   'prescribed_textbook': 'Dummys Guide to Programming'
+ },{
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2018,
+   'prescribed_textbook': 'Dummys Guide to Programming'
+ },{
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2018,
+   'prescribed_textbook': 'Dummys Guide to Programming'
+ },{
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2018,
+   'prescribed_textbook': 'Dummys Guide to Programming'
+ },
+]
+@app.route('/syncSubjects')
+def syncSubjects():
+	return None
 
 @app.route('/showSubjects')
 def showSubjects():
-	return render_template('subject_list.html')
+
+	return render_template('subject_list.html', past_subjects=past_subjects, curr_subjects=curr_subjects)
 @app.route('/buyBook')
 def buyBook():
 	return render_template('buy_resource.html')
