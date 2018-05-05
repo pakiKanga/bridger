@@ -4,8 +4,9 @@
 {% block content %}
 <main>
 <div class="container rounded z-depth-1">
- <h1 class="center">Sell a Resource</h1>
- <h2>Your Past Subjects</h2>
+  <div class="red"><h1 class="center padding-top padding-bottom">Sell a Resource</h1></div>
+ 
+ <h2 class="padding-left">Your Past Subjects</h2>
 
   <ul class="collapsible">
     <li>
@@ -22,7 +23,7 @@
     </li>
   </ul>
 
-   <h2>Your Current Subjects</h2>
+   <h2 class="padding-left">Your Current Subjects</h2>
 
   <ul class="collapsible">
     <li>
@@ -37,6 +38,8 @@
 <!-- Modal Structure -->
 
   {% endblock %}
+
+   {% include "footer.html" %}
 
 
 

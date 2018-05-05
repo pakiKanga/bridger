@@ -3,10 +3,11 @@
 
 {% block content %}
 <main>
-<div class="row">
 <div class="container rounded z-depth-1">
- <h1 class="center">Your Subjects</h1>
- <h2>Your Past Subjects</h2>
+  <div class="red">
+    <h1 class="center padding-top padding-bottom">Your Subjects</h1>
+  </div>
+ <h2 class="padding-left">Your Past Subjects</h2>
 
   <ul class="collapsible">
     {% for x in past_subjects %}
@@ -17,7 +18,7 @@
     {% endfor %}
   </ul>
 
-   <h2>Current Subjects</h2>
+   <h2 class="padding-left">Current Subjects</h2>
 
   <ul class="collapsible">
      {% for x in curr_subjects %}
@@ -29,7 +30,6 @@
 
   </ul>
 
- </div>
  </div>
    <div class="row center">
   <a class="waves-effect waves-light btn-large">Sync Subjects</a>

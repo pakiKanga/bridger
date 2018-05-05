@@ -264,5 +264,29 @@ nav ul a {
 }
 
 div.active {
-  background-color: #79B791;
+  background-color: #D35135;
+}
+
+.collection .collection-item.avatar .circle {
+  width: 120px;
+  height: 60px;
+}
+
+h4{
+  font-size:1.3em;
+}
+.page-footer .footer-copyright {
+  background-color: #3E5641
+}
+
+.padding-left{
+  padding-left: 20px;
+}
+
+.padding-top{
+  padding-top: 10px;
+}
+
+.padding-bottom{
+  padding-bottom: 10px;
 }
