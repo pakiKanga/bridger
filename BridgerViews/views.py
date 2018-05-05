@@ -58,6 +58,32 @@ curr_subjects = [
    'prescribed_textbook': 'Dummys Guide to Programming'
  },
 ]
+
+universities = [
+  {
+    'name': 'University of Sydney',
+    'logo': 'static/images/usyd.png'
+  },{
+    'name': 'University of New South Wales',
+    'logo': 'static/images/unsw.ping'
+  },{
+    'name': 'University of Technology Sydney',
+    'logo': 'static/images/unsw.ping'
+  },{
+    'name': 'Macquarie University',
+    'logo': 'static/images/unsw.ping'
+  },{
+    'name': 'University of Western Sydney',
+    'logo': 'static/images/unsw.ping'
+  },{
+    'name': 'Notredame Universtiy',
+    'logo': 'static/images/unsw.ping'
+  },{
+    'name': 'ACU',
+    'logo': 'static/images/unsw.ping'
+  },
+]
+
 @app.route('/syncSubjects')
 def syncSubjects():
 	return None
@@ -74,7 +100,7 @@ def sellBook():
 	return render_template('sell_resource.html')
 @app.route('/login')
 def login():
-	return render_template('login_page.html')
+	return render_template('login_page.html', universities=universities)
 	
 @app.route("/")
 @app.route("/index")
