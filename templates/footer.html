@@ -1,0 +1,29 @@
+{% block content %}
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Bridger</h5>
+        <p class="grey-text text-lighten-4">
+         {% if session.firstname %}
+         Welcome, {{session.firstname}}
+         {% else %}
+         Log in to sync your subjects.
+         {% endif %}  
+
+       </p>
+     </div>
+    
+  </div>
+</div>
+<div class="footer-copyright">
+<div class="container">
+  <div class="left offset-s2">
+    © 2018 Bridger Co Pty Ltd
+  </div>
+ 
+  </div>
+</div>
+</footer>
+
+{% endblock %}
