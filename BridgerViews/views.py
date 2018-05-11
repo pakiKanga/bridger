@@ -16,22 +16,34 @@ past_subjects = [
    'name': 'Introduction to Programming',
    'subject_code': 'INFO1110',
    'year_completed': 2016,
-   'prescribed_textbook': 'Dummys Guide to Programming'
+   'semester': 1,
+   'prescribed_textbook': 'Dummys Guide to Programming',
+   'enjoyability': 4,
+   'difficulty' : 5
+ }, {
+   'name': 'Introduction to Programming',
+   'subject_code': 'INFO1110',
+   'year_completed': 2016,
+   'semester': 1,
+   'prescribed_textbook': 'Dummys Guide to Programming',
+   'enjoyability': 4,
+   'difficulty' : 5
  },{
    'name': 'Introduction to Programming',
    'subject_code': 'INFO1110',
    'year_completed': 2016,
-   'prescribed_textbook': 'Dummys Guide to Programming'
- },{
+   'semester': 1,
+   'prescribed_textbook': 'Dummys Guide to Programming',
+   'enjoyability': 4,
+   'difficulty' : 5
+ }, {
    'name': 'Introduction to Programming',
    'subject_code': 'INFO1110',
    'year_completed': 2016,
-   'prescribed_textbook': 'Dummys Guide to Programming'
- },{
-   'name': 'Introduction to Programming',
-   'subject_code': 'INFO1110',
-   'year_completed': 2016,
-   'prescribed_textbook': 'Dummys Guide to Programming'
+   'semester': 1,
+   'prescribed_textbook': 'Dummys Guide to Programming',
+   'enjoyability': 4,
+   'difficulty' : 5
  },
 ]
 
@@ -39,23 +51,35 @@ curr_subjects = [
  {
    'name': 'Introduction to Programming',
    'subject_code': 'INFO1110',
+   'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'Dummys Guide to Programming'
+   'prescribed_textbook': 'Dummys Guide to Programming',
+   'enjoyability': 4,
+   'difficulty' : 5
  },{
    'name': 'Introduction to Programming',
    'subject_code': 'INFO1110',
+   'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'Dummys Guide to Programming'
+   'prescribed_textbook': 'Dummys Guide to Programming',
+   'enjoyability': 4,
+   'difficulty' : 5
  },{
    'name': 'Introduction to Programming',
    'subject_code': 'INFO1110',
+   'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'Dummys Guide to Programming'
+   'prescribed_textbook': 'Dummys Guide to Programming',
+   'enjoyability': 4,
+   'difficulty' : 5
  },{
    'name': 'Introduction to Programming',
    'subject_code': 'INFO1110',
+   'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'Dummys Guide to Programming'
+   'prescribed_textbook': 'Dummys Guide to Programming',
+   'enjoyability': 4,
+   'difficulty' : 5
  },
 ]
 
@@ -86,6 +110,10 @@ universities = [
 
 @app.route('/syncSubjects')
 def syncSubjects():
+	return None
+
+@app.route('/viewBook')
+def viewBook():
 	return None
 
 @app.route('/showSubjects')
