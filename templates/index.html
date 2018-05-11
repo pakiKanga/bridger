@@ -19,11 +19,14 @@
             </div>
         </div>
 
-
-
-
+        {% if session.username %}
+        <a href="{{url_for('buyBook')}}" class="btn-large center lightGreen">Buy</a>
+        <a href="{{url_for('sellBook')}}" class="btn-large center lightGreen">Sell</a>
+        <a href="{{url_for('logout')}}" class="btn-large center lightGreen">Log Out</a>
+        {% else %}
         <a href="{{url_for('login')}}" class="btn-large center lightGreen">Login</a>
-        <a href="{{url_for('login')}}" class="btn-large center lightGreen">Create Account</a>
+        <a href="{{url_for('register')}}" class="btn-large center lightGreen">Create Account</a>
+        {% endif %}
 
 
     </div>

@@ -95,7 +95,7 @@ def showSubjects():
 @app.route('/buyBook')
 def buyBook():
 	return render_template('buy_resource.html')
-@app.route('/sellBook')
+@app.route('/buyBook')
 def sellBook():
 	return render_template('sell_resource.html')
 @app.route('/login')
@@ -104,12 +104,26 @@ def login():
 @app.route('/loginPage')
 def loginPage():
 	return render_template('login.html')
+@app.route('/completeLogin')
+def completeLogin():
+	session['username'] = 'user'
+	return redirect(url_for('index'))
+@app.route('/register')
+def register():
+	return render_template('register_page.html', universities=universities)
+@app.route('/registerPage')
+def registerPage():
+	return render_template('register.html')
+@app.route('/completeRegister')
+def completeRegister():
+	return redirect(url_for('index'))
+@app.route('/logout')
+def logout():
+	session.pop('username', None)
+	return redirect(url_for('index'))
 @app.route("/")
 @app.route("/index")
 def index():
-	session.pop('locations', None)
-	session.pop('session_token', None)
-	session['locations'] = {'coords': []}
 	return render_template('index.html', sidebar=False)
 
 #Function which generates a random ID of a specific size
