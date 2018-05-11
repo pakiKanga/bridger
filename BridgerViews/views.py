@@ -118,12 +118,11 @@ def viewBook():
 
 @app.route('/showSubjects')
 def showSubjects():
-
 	return render_template('subject_list.html', past_subjects=past_subjects, curr_subjects=curr_subjects)
 @app.route('/buyBook')
 def buyBook():
 	return render_template('buy_resource.html')
-@app.route('/buyBook')
+@app.route('/sellBook')
 def sellBook():
 	return render_template('sell_resource.html')
 @app.route('/login')
