@@ -18,6 +18,7 @@ past_subjects = [
    'year_completed': 2016,
    'semester': 1,
    'prescribed_textbook': 'Dummys Guide to Programming',
+   'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
  }, {
@@ -26,6 +27,8 @@ past_subjects = [
    'year_completed': 2016,
    'semester': 1,
    'prescribed_textbook': 'Dummys Guide to Programming',
+   'book_id': 1,
+
    'enjoyability': 4,
    'difficulty' : 5
  },{
@@ -34,6 +37,7 @@ past_subjects = [
    'year_completed': 2016,
    'semester': 1,
    'prescribed_textbook': 'Dummys Guide to Programming',
+   'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
  }, {
@@ -42,6 +46,8 @@ past_subjects = [
    'year_completed': 2016,
    'semester': 1,
    'prescribed_textbook': 'Dummys Guide to Programming',
+   'book_id': 1,
+
    'enjoyability': 4,
    'difficulty' : 5
  },
@@ -54,6 +60,7 @@ curr_subjects = [
    'semester': 1,
    'year_completed': 2018,
    'prescribed_textbook': 'Dummys Guide to Programming',
+    'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
  },{
@@ -62,6 +69,8 @@ curr_subjects = [
    'semester': 1,
    'year_completed': 2018,
    'prescribed_textbook': 'Dummys Guide to Programming',
+   'book_id': 1,
+
    'enjoyability': 4,
    'difficulty' : 5
  },{
@@ -70,6 +79,7 @@ curr_subjects = [
    'semester': 1,
    'year_completed': 2018,
    'prescribed_textbook': 'Dummys Guide to Programming',
+   'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
  },{
@@ -78,6 +88,7 @@ curr_subjects = [
    'semester': 1,
    'year_completed': 2018,
    'prescribed_textbook': 'Dummys Guide to Programming',
+   'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
  },
@@ -108,46 +119,63 @@ universities = [
   },
 ]
 
+
+books = [
+	{
+		'id': 1,
+		'name': 'Dummys Guide to Programming'
+	}
+
+]
+
 @app.route('/syncSubjects')
 def syncSubjects():
 	return None
 
-@app.route('/viewBook')
-def viewBook():
-	return None
+
+@app.route('/sellBook/<string:book_id>')
+def sellBook(book_id):
+	
+	return render_template('sell_resource.html', book=book_id)
 
 @app.route('/showSubjects')
 def showSubjects():
 	return render_template('subject_list.html', past_subjects=past_subjects, curr_subjects=curr_subjects)
+
 @app.route('/buyBook')
 def buyBook():
 	return render_template('buy_resource.html')
-@app.route('/sellBook')
-def sellBook():
-	return render_template('sell_resource.html')
+	
 @app.route('/login')
 def login():
 	return render_template('login_page.html', universities=universities)
+
 @app.route('/loginPage')
 def loginPage():
 	return render_template('login.html')
+
 @app.route('/completeLogin')
 def completeLogin():
 	session['username'] = 'user'
 	return redirect(url_for('index'))
+
 @app.route('/register')
 def register():
 	return render_template('register_page.html', universities=universities)
+
 @app.route('/registerPage')
 def registerPage():
 	return render_template('register.html')
+
 @app.route('/completeRegister')
 def completeRegister():
 	return redirect(url_for('index'))
+
 @app.route('/logout')
 def logout():
 	session.pop('username', None)
 	return redirect(url_for('index'))
+
 @app.route("/")
 @app.route("/index")
 def index():
