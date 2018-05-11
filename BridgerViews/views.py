@@ -135,7 +135,8 @@ def syncSubjects():
 
 @app.route('/sellBook/<string:book_id>')
 def sellBook(book_id):
-	
+	for x in books:
+		print(x)
 	return render_template('sell_resource.html', book=book_id)
 
 @app.route('/showSubjects')
