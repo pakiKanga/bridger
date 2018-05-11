@@ -125,7 +125,8 @@ books = [
 		'id': 1,
 		'name': 'Dummys Guide to Programming',
 		'author': 'Greg Frinklestein',
-		'price' : 20 
+		'price' : 20,
+		'subject' : 'INFO1110'
 	},
 	{
 		'id': 2,

@@ -20,6 +20,7 @@
         </div>
 
         {% if session.username %}
+        <a href="{{url_for('showSubjects')}}" class="btn-large center lightGreen">View Your Subjects</a>
         <a href="{{url_for('logout')}}" class="btn-large center lightGreen">Log Out</a>
         {% else %}
         <a href="{{url_for('login')}}" class="btn-large center lightGreen">Login</a>
