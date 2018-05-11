@@ -123,9 +123,22 @@ universities = [
 books = [
 	{
 		'id': 1,
-		'name': 'Dummys Guide to Programming'
+		'name': 'Dummys Guide to Programming',
+		'author': 'Greg Frinklestein',
+		'price' : 20 
+	},
+	{
+		'id': 2,
+		'name': 'A primer to C++',
+		'author': 'Jerry Seinfield',
+		'price': 20
+	},
+	{ 
+		'id': 3,
+		'name': 'Undefined',
+		'author': 'Groot',
+		'price': 20
 	}
-
 ]
 
 @app.route('/syncSubjects')
@@ -136,8 +149,9 @@ def syncSubjects():
 @app.route('/sellBook/<string:book_id>')
 def sellBook(book_id):
 	for x in books:
-		print(x)
-	return render_template('sell_resource.html', book=book_id)
+		if x['id'] == int(book_id):
+			return render_template('sell_resource.html', book=x)
+	return render_template('sell_resource.html', book=None)
 
 @app.route('/showSubjects')
 def showSubjects():
