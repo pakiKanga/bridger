@@ -26,9 +26,11 @@
 
       <ul class="right hide-on-med-and-down">
         <li><a href="{{url_for('index')}}"><i class="material-icons left">home</i>HOME</a></li>
+        {% if session.username %}
         <li><a href="{{url_for('showSubjects')}}"><i class="material-icons left">book</i>SUBJECTS</a></li>
         <li><a href="{{url_for('sellBook')}}"><i class="material-icons left">people</i>SELL</a></li>
         <li><a href="{{url_for('buyBook')}}"><i class="material-icons left">people</i>BUY</a></li>
+        {% endif %}
 
       </ul>
 
