@@ -170,7 +170,7 @@ def registerPage():
 
 @app.route('/completeRegister')
 def completeRegister():
-	return redirect(url_for('index'))
+	return redirect(url_for('showSubjects'))
 
 @app.route('/logout')
 def logout():
