@@ -5,10 +5,47 @@
 <main>
 <div class="container rounded z-depth-1">
 <div class="lightGreen">
-  <h1 class="center padding-top padding-bottom">Buy {{book_id}}</h1>
+  <h2 class="center padding-top padding-bottom">Buy {{book.name}}</h1>
 </div>
 
+<div class="row">
+  <div class="col s12 m1">
+  </div>
+  <div class="col s12 m5">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{url_for('static', filename='office.jpg')}}">
+        <span class="card-title">{{book.name}}</span>
+      </div>
+      <div class="card-content">
+        <p>{{book.author}}</p>
+        <p>$20</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Buy now!!!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m5">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{url_for('static', filename='office.jpg')}}">
+        <span class="card-title">{{book.name}}</span>
+      </div>
+      <div class="card-content">
+        <p>{{book.author}}</p>
+        <p>$25</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Buy now!!!</a>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="row">
+
+</div>
 
  </div>
 </main>
