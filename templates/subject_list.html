@@ -18,25 +18,25 @@
           <div class="col s12 m12 l12">
           <div class="card red lighten-1">
           <div class="card-content center white-text">
-           <h4>          <strong>{{x.name}}: {{x.subject_code}} (Completed in {{x.year_completed}} - Semester {{x.semester}}) </strong> </h4> 
+           <h4>          <strong>{{x.name}}: {{x.subject_code}} (Completed in {{x.year_completed}} - Semester {{x.semester}}) </strong> </h4>
           </div>
           </div>
           </div>
         </div>
-       
+
         <div class="row">
           <div class="col s6 m6 l6">
           <div class="card red lighten-1">
           <div class="card-content center white-text">
-           <h5>Users rated the enjoyability of this subject: <strong>{{x.enjoyability}}</strong> </h5> 
+           <h5>Users rated the enjoyability of this subject: <strong>{{x.enjoyability}}</strong> </h5>
           </div>
           </div>
           </div>
-       
+
           <div class="col s6 m6 l6">
           <div class="card red lighten-1">
           <div class="card-content center white-text">
-           <h5>Users rated the difficulty of this subject: <strong>{{x.difficulty}}</strong> </h5> 
+           <h5>Users rated the difficulty of this subject: <strong>{{x.difficulty}}</strong> </h5>
           </div>
           </div>
           </div>
@@ -46,7 +46,7 @@
           <div class="col s12 m12 l12">
             <div class="card red lighten-1">
               <div class="card-content center white-text">
-                <h5>Earn bonus points by rating your subjects!</strong> </h5> 
+                <h5>Earn bonus points by rating your subjects!</strong> </h5>
               </div>
             </div>
           </div>
@@ -61,14 +61,14 @@
         </div>
         <div class="card-action">
           <a class="white-text" href="{{url_for('sellBook', book_id=x.book_id)}}">Sell Me</a>
-          <a class="white-text" href="#">Buy Me</a>
+          <a class="white-text" href="{{url_for('buyBook', object = x)}}">Buy Me</a>
         </div>
       </div>
     </div>
   </div>
       </div>
 
-       
+
     </li>
     {% endfor %}
   </ul>
@@ -84,25 +84,25 @@
           <div class="col s12 m12 l12">
           <div class="card red lighten-1">
           <div class="card-content center white-text">
-           <h4>          <strong>{{x.name}}: {{x.subject_code}} (Completed in {{x.year_completed}} - Semester {{x.semester}}) </strong> </h4> 
+           <h4>          <strong>{{x.name}}: {{x.subject_code}} (Completed in {{x.year_completed}} - Semester {{x.semester}}) </strong> </h4>
           </div>
           </div>
           </div>
         </div>
-       
+
         <div class="row">
           <div class="col s6 m6 l6">
           <div class="card red lighten-1">
           <div class="card-content center white-text">
-           <h5>Users rated the enjoyability of this subject: <strong>{{x.enjoyability}}</strong> </h5> 
+           <h5>Users rated the enjoyability of this subject: <strong>{{x.enjoyability}}</strong> </h5>
           </div>
           </div>
           </div>
-       
+
           <div class="col s6 m6 l6">
           <div class="card red lighten-1">
           <div class="card-content center white-text">
-           <h5>Users rated the difficulty of this subject: <strong>{{x.difficulty}}</strong> </h5> 
+           <h5>Users rated the difficulty of this subject: <strong>{{x.difficulty}}</strong> </h5>
           </div>
           </div>
           </div>
@@ -112,7 +112,7 @@
           <div class="col s12 m12 l12">
             <div class="card red lighten-1">
               <div class="card-content center white-text">
-                <h5>Earn bonus points by rating your subjects!</strong> </h5> 
+                <h5>Earn bonus points by rating your subjects!</strong> </h5>
               </div>
             </div>
           </div>
@@ -150,4 +150,3 @@
 
 
 {% include "footer.html" %}
-

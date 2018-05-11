@@ -1,23 +1,15 @@
-  
+
 {% include "header.html" %}
 
 {% block content %}
 <main>
 <div class="container rounded z-depth-1">
 <div class="lightGreen">
-  <h1 class="center padding-top padding-bottom">Buy a Resource</h1>
+  <h1 class="center padding-top padding-bottom">Buy {{book_id}}</h1>
 </div>
- 
-<h2 class="padding-left">Your Current Subjects</h2>
 
-  <ul class="collapsible">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">add</i>ELEC3610</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
 
-  </ul>
-        
+
  </div>
 </main>
 <!-- Modal Structure -->
@@ -25,7 +17,3 @@
   {% endblock %}
 
    {% include "footer.html" %}
-
-
-
-

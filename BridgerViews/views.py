@@ -143,11 +143,10 @@ def sellBook(book_id):
 def showSubjects():
 	return render_template('subject_list.html', past_subjects=past_subjects, curr_subjects=curr_subjects)
 
-@app.route('/buyBook')
+@app.route('/buyBook/<string:x.book_id>')
 def buyBook():
-	print (requests)
 	return render_template('buy_resource.html')
-	
+
 @app.route('/login')
 def login():
 	return render_template('login_page.html', universities=universities)
@@ -190,7 +189,7 @@ def id_generator(size, chars=string.ascii_uppercase + string.digits):
 
 def set_session(session_id):
 	session['session_token'] = session_id
-	
+
 #Returns a session if it exists, else None
 def return_session(session_id):
 	session['session_token'] = session_id
@@ -224,7 +223,7 @@ def calculateConvergence():
 	for x in query:
 		query_results.append(x.location_name)
 	coords = convertLocationToCoords(query_results)
-	midpoint = findConvergence(coords)	
+	midpoint = findConvergence(coords)
 	locations = findLocations(midpoint)
 	return render_template('location_list.html', locations=locations, convergence=midpoint, key = app.config['GOOGLE_API_KEY'], session_id=session['session_token'])
 
@@ -322,5 +321,3 @@ def findLocations(convergenceCoords):
 	googleResponse = requests.get(url)
 	json_data = json.loads(googleResponse.text)
 	return json_data['results']
-
-
