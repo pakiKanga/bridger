@@ -126,8 +126,8 @@
           <p>{{x.prescribed_textbook}}</p>
         </div>
         <div class="card-action">
-          <a class="white-text" href="#">Sell Me</a>
-          <a class="white-text" href="#">Buy Me</a>
+          <a class="white-text" href="{{url_for('sellBook', book_id=x.book_id)}}">Sell Me</a>
+          <a class="white-text" href="{{url_for('sellBook', book_id=x.book_id)}}">Buy Me</a>
         </div>
       </div>
     </div>
