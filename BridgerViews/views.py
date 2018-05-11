@@ -146,7 +146,7 @@ def showSubjects():
 @app.route('/buyBook')
 def buyBook():
 	return render_template('buy_resource.html')
-
+	
 @app.route('/login')
 def login():
 	return render_template('login_page.html', universities=universities)
