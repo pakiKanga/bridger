@@ -276,7 +276,11 @@ h4{
   font-size:1.3em;
 }
 .page-footer .footer-copyright {
-  background-color: #3E5641
+  background-color: #3E5641;
+}
+
+.page-footer{
+  padding-top: 5px;
 }
 
 .padding-left{
@@ -289,4 +293,9 @@ h4{
 
 .padding-bottom{
   padding-bottom: 10px;
+}
+
+.circle {
+  border-radius: 0%;
+  width: 150px;
 }

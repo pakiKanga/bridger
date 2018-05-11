@@ -89,22 +89,22 @@ universities = [
     'logo': 'static/images/usyd.png'
   },{
     'name': 'University of New South Wales',
-    'logo': 'static/images/unsw.ping'
+    'logo': 'static/images/unsw.png'
   },{
     'name': 'University of Technology Sydney',
-    'logo': 'static/images/unsw.ping'
+    'logo': 'static/images/uts.png'
   },{
     'name': 'Macquarie University',
-    'logo': 'static/images/unsw.ping'
+    'logo': 'static/images/mq.png'
   },{
     'name': 'University of Western Sydney',
-    'logo': 'static/images/unsw.ping'
+    'logo': 'static/images/wsu.png'
   },{
     'name': 'Notredame Universtiy',
-    'logo': 'static/images/unsw.ping'
+    'logo': 'static/images/nda.png'
   },{
     'name': 'ACU',
-    'logo': 'static/images/unsw.ping'
+    'logo': 'static/images/acu.png'
   },
 ]
 
@@ -129,7 +129,9 @@ def sellBook():
 @app.route('/login')
 def login():
 	return render_template('login_page.html', universities=universities)
-	
+@app.route('/loginPage')
+def loginPage():
+	return render_template('login.html')
 @app.route("/")
 @app.route("/index")
 def index():
