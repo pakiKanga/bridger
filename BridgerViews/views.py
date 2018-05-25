@@ -172,10 +172,14 @@ def login():
 def loginPage():
     return render_template('login.html')
 
+@app.route('/messages')
+def messages():
+    return render_template('messages.html')
+
 @app.route('/completeLogin')
 def completeLogin():
     session['username'] = 'user'
-    return redirect(url_for('index'))
+    return redirect(url_for('showSubjects'))
 
 @app.route('/register')
 def register():

@@ -1,0 +1,46 @@
+{% include "header.html" %}
+
+{% block content %}
+
+<main>
+    <div class="row">
+        <div class="col s3">
+            <ul class="collection">
+                <a class="collection-item">Alvin</a>
+                <a class="collection-item">Ali</a>
+                <a class="collection-item">Zarhayda</a>
+                <a class="collection-item">James</a>
+            </ul>
+        </div>
+        <div class="col s9">
+            <div class="chat">
+            <img src="static/images/user.png" alt="Avatar">
+            <p>Hello. I am interested in buying a textbook.</p>
+            <span class="time-right">11:00</span>
+            </div>
+            
+            <div class="chat darker">
+            <img src="static/images/user.png" alt="Avatar" class="right">
+            <p class="right">Sure, when are you in uni?</p>
+            <span class="time-left">11:01</span>
+            </div>
+            
+            <div class="chat">
+            <img src="static/images/user.png" alt="Avatar">
+            <p>Tomorrow, I will sent you the location once I'm there?</p>
+            <span class="time-right">11:02</span>
+            </div>
+            
+            <div class="chat darker">
+            <img src="static/images/user.png" alt="Avatar" class="right">
+            <p class="right">Sweet, see you there. Bring cash please.</p>
+            <span class="time-left">11:05</span>
+            </div>
+            <a href="{{url_for('login')}}" class="btn-large center lightGreen">Send Location</a>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+{% include "footer.html" %}
