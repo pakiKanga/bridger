@@ -299,3 +299,52 @@ h4{
   border-radius: 0%;
   width: 150px;
 }
+
+/* Chat containers */
+.chat {
+  border: 1px solid #dedede;
+  border-radius: 1px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.chat::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.chat img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.chat img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
