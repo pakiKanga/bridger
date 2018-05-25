@@ -3,32 +3,39 @@
 
 {% block content %}
 <main>
-
+      <br>
         <div class="container z-depth-1 rounded">
+        <h2 class="center">Enter book details </h2>
            <div class="row padding-left padding-top padding-right">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Book Name" value="{{book.name}}" id="first_name" type="text" class="validate">
+          <input placeholder="Book Name" value="{{book.name}}" id="book_name" type="text" class="validate">
           <label for="first_name">Book Name</label>
         </div>
          <div class="input-field col s6">
-          <input placeholder="Author" value="{{book.author}}" id="first_name" type="text" class="validate">
-          <label for="first_name">Author</label>
+          <input placeholder="Author" value="{{book.author}}" id="author" type="text" class="validate">
+          <label for="author">Author</label>
         </div>
 
          <div class="input-field col s6">
-          <input placeholder="Suggested Price" value="{{book.price}}" id="first_name" type="text" class="validate">
-          <label for="first_name">Price</label>
+          <input placeholder="Suggested Price" value="{{book.price}}" id="price" type="text" class="validate">
+          <label for="price">Price</label>
         </div>
 
           <div class="input-field col s6">
-          <input placeholder="Subject" value="{{book.subject}}" id="first_name" type="text" class="validate">
-          <label for="first_name">Subject</label>
+          <input type="text" id="autocomplete-input" class="autocomplete">
+          <label for="autocomplete-input">Subject</label>
         </div>
 
+        <div class="input-field col s12">
+          <textarea id="book_det" class="materialize-textarea"></textarea>
+          <label for="book_det">Book Condition</label>
+        </div>
       </div>
 
+
+      </div>
 
     </form>
   </div>
@@ -38,7 +45,7 @@
 
 
    <div class="row center">
-  <a class="waves-effect waves-light btn-large">Sell Book</a>
+  <a class="waves-effect waves-light btn-large" id="commit_book">Sell Book</a>
   </div>
 </main>
 <!-- Modal Structure -->
