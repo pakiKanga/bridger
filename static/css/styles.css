@@ -306,6 +306,7 @@ h4{
   border-radius: 1px;
   padding: 10px;
   margin: 10px 0;
+  list-style-type: none;
 }
 
 /* Darker chat container */
@@ -347,4 +348,12 @@ h4{
 .time-left {
   float: left;
   color: #999;
+}
+
+#map {
+  height: 500px;
+}
+
+.send {
+  padding-top: 20px;
 }
