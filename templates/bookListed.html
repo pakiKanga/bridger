@@ -1,0 +1,30 @@
+
+{% include "header.html" %}
+
+{% block content %}
+<main>
+      <br>
+        <div class="container z-depth-1 rounded">
+        <h2 class="center">You have successfully listed your book!</h2>
+        <h3 class="center">Over {{viewers}} people will soon see your listing. </h3>
+
+        <br>
+          
+
+        </div>
+
+        <br>
+        
+
+
+
+   <div class="row center">
+  <a class="waves-effect waves-light btn-large" href="{{url_for('showSubjects')}}">Return</a>
+  </div>
+</main>
+<!-- Modal Structure -->
+
+  {% endblock %}
+
+
+{% include "footer.html" %}

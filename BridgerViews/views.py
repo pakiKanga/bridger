@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 from bridger import app, db
 from BridgerViews.models import UserSession
 from locations.models import UserLocation
-import os, datetime, json
+import os, datetime, json, random
 
 ID = "AIzaSyD3Grw77GNz2fnPKnU23JWQaoXjeU97iT8"
 past_subjects = [
@@ -141,6 +141,8 @@ books = [
     }
 ]
 
+max_id = 4
+
 @app.route('/syncSubjects')
 def syncSubjects():
     return None
@@ -202,6 +204,32 @@ def logout():
 @app.route("/index")
 def index():
     return render_template('index.html', sidebar=False)
+
+
+@app.route('/bookListed')
+def bookListed():
+    viewers = random.randint(500, 1000) 
+    return render_template('bookListed.html', viewers=viewers)
+
+@app.route('/commitBook')
+def commitBook():
+    success = True
+    book_name = request.args.get('book_name', 0, type=str)
+    author = request.args.get('author', 0, type=str)
+    price = request.args.get('price', 0, type=str)
+    subject = request.args.get('subject', 0, type=str)
+    condition = request.args.get('condition', 0, type=str)
+
+    new_book = {
+        'id': max_id,
+        'name': book_name,
+        'author': author,
+        'price' : price
+        }
+    books.append(new_book)
+    for x in books:
+        print(x)
+    return jsonify(dict(redirect='http://127.0.0.1:5000/bookListed'))
 
 #Function which generates a random ID of a specific size
 def id_generator(size, chars=string.ascii_uppercase + string.digits):

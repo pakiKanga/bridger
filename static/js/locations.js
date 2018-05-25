@@ -56,28 +56,37 @@ $(function () {
 		$(".button-collapse").sideNav();
 		$('select').material_select();
 		$('.modal').modal();
-
-		$('#removeLocation').on('click', function(event) {
-			console.log("Removing location")
-			// $(this).parent().remove();
-			$(this).parent().hide('slow', function() {
-				$(this).remove(); 
-			});
-
-			curr_address = $(this).parent().attr('id')
-			$.getJSON("/removeLocation",  {
-				curr_address: curr_address,
-			});
-		});
-
-		$('#add_address').on('click', function(event) {
-			addAddress()
-
-		});
+		$('input.autocomplete').autocomplete({
+      data: {
+        "COMP2129": null,
+        "INFO1110": null,
+        "ELEC3610": null,
+      },
+    });
 
 		$('#join_session').on('click', function(event) {
-			var session_id = document.getElementById("session_id").value
+			var session_id = document.getElementById("session_id").value;
 			window.location.replace(session_id);
+
+		});
+
+		$('#commit_book').on('click', function(event) {
+			var book_name = document.getElementById("book_name").value;
+			var author = document.getElementById("author").value;
+			var price = document.getElementById("price").value;
+			// var subject = document.getElementById("autocomplete-input").value;
+			// var condition = document.getElementById("book_det").value;
+			$.getJSON("/commitBook", {
+				book_name: book_name,
+				author: author,
+				price: price,
+				// subject: subject,
+				// condition: condition,
+			}, function(response) {
+				console.log("Logged");
+				window.location.href = response.redirect;
+
+			});
 
 		});
 
@@ -86,39 +95,9 @@ $(function () {
 			if(e.which == 13) {
 				addAddress();
 			}
-		});
-
-		var concurrentUpdate = function(data) {
-			var session_info = $('#session').data();
-			console.log(session_info)
-			console.log(data)
-			$('#location_list').prepend("<li class='collection-item'>" + data +" </li>");
-
-		}
-	
+		});	
 	});
 
-	$(document).ajaxComplete(function () {
-		$('#removeLocation').on('click', function(event) {
-				console.log("Removing location")
-			curr_address = $(this).parent().attr('id')
-			$(this).parent().hide('slow');
-			//$(this).parent().remove(); 
-			
-			$.getJSON("/removeLocation",  {
-				curr_address: curr_address,
-			});
-
-			for (var i = 0; i < markers.length; i++) {
-				if (markers[i].title == curr_address) {
-					markers[i].setMap(null)
-				}
-			}
-
-
-
-		});
-	});
 
 	function dynamicMap() {
 		bounds = new google.maps.LatLngBounds();
@@ -203,12 +182,3 @@ function geolocate() {
     });
   }
 }
-
-	// function updateDynamicMap(coords) {
-	// 		console.log(coords)
-	// 	var map;
- //        map = new google.maps.Map(document.getElementById('map'), {
- //          center: {lat: coords[0]['lat'], lng: coords[0]['lng']},
- //          zoom: 15
- //        });
-	// }
