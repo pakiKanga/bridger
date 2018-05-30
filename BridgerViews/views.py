@@ -166,6 +166,10 @@ def buyBook(book_id):
             return render_template('buy_resource.html', book=x)
     return render_template('buy_resource.html', book=None)
 
+@app.route('/sold')
+def sold():
+    return render_template('deleted.html')
+
 @app.route('/login')
 def login():
     return render_template('login_page.html', universities=universities)
