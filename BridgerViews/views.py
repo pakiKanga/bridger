@@ -59,8 +59,8 @@ curr_subjects = [
    'subject_code': 'COMP3419',
    'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'None Prescribed',
-    'book_id': 1,
+   'prescribed_textbook': 'Graphics and Multimedia',
+    'book_id': 3,
    'enjoyability': 4,
    'difficulty' : 5
  },{
@@ -135,7 +135,7 @@ books = [
     },
     {
     'id': 3,
-    'name': 'Undefined',
+    'name': 'Graphics and Multimedia',
     'author': 'Groot',
     'price': 20
     }

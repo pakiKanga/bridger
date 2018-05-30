@@ -39,13 +39,17 @@
                 </li>
             </ul>
 
-            <div class="col s11">
+            <div class="col s10">
                 <textarea id="textarea1" class="materialize-textarea"></textarea>
             </div>
             <div class="col s1">
-                <button onclick="send()">Send</button>
+                <a class="btn center lightGreen" onclick="send()">Send</a>
             </div>
 
+            <div class="col s10">
+                <a href="{{url_for('login')}}" class="btn center lightGreen padding-bottom">Book Sold</a>
+            </div>
+            
             <script>
             function send() {
                 var x = document.getElementById("textarea1").value;
