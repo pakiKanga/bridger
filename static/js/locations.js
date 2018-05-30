@@ -61,6 +61,10 @@ $(function () {
         "COMP2129": null,
         "INFO1110": null,
         "ELEC3610": null,
+        "INFO1105": null,
+        "COMP3308": null,
+        "INFO3220": null,
+        "ELEC1601": null,
       },
     });
 

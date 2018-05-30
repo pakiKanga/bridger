@@ -7,6 +7,62 @@
   <div class="darkGreen">
     <h1 class="center padding-top padding-bottom white-text">Your Subjects</h1>
   </div>
+
+   <h2 class="padding-left">Current Subjects</h2>
+
+  <ul class="collapsible">
+     {% for x in curr_subjects %}
+    <li>
+        <div class="collapsible-header"><i class="material-icons">add</i>{{x.name}} - {{x.subject_code}} </div>
+      <div class="collapsible-body">
+        <div class="row">
+          <div class="col s12 m12 l12">
+          <div class="card red lighten-1">
+          <div class="card-content center white-text">
+           <h4>          <strong>{{x.name}}: {{x.subject_code}} (Completed in {{x.year_completed}} - Semester {{x.semester}}) </strong> </h4>
+          </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s6 m6 l6">
+          <div class="card red lighten-1">
+          <div class="card-content center white-text">
+           <h5>Enjoyability of this subject: <strong>{{x.enjoyability}}</strong> </h5>
+          </div>
+          </div>
+          </div>
+
+          <div class="col s6 m6 l6">
+          <div class="card red lighten-1">
+          <div class="card-content center white-text">
+           <h5>Difficulty of this subject: <strong>{{x.difficulty}}</strong> </h5>
+          </div>
+          </div>
+          </div>
+        </div>
+
+         <div class="row">
+    <div class="col s12 m12">
+      <div class="card red lighten-1">
+        <div class="card-content white-text">
+          <span class="card-title">Prescribed Textbook</span>
+          <p>{{x.prescribed_textbook}}</p>
+        </div>
+        <div class="card-action">
+          <a class="white-text" href="{{url_for('sellBook', book_id=x.book_id)}}">Sell Me</a>
+          <a class="white-text" href="#">Lease Me</a>
+          <a class="white-text" href="{{url_for('sellBook', book_id=x.book_id)}}">Buy Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+      </li>
+    {% endfor %}
+
+  </ul>
  <h2 class="padding-left">Your Past Subjects</h2>
 
   <ul class="collapsible">
@@ -64,71 +120,7 @@
     {% endfor %}
   </ul>
 
-   <h2 class="padding-left">Current Subjects</h2>
-
-  <ul class="collapsible">
-     {% for x in curr_subjects %}
-    <li>
-        <div class="collapsible-header"><i class="material-icons">add</i>{{x.name}} - {{x.subject_code}} </div>
-      <div class="collapsible-body">
-        <div class="row">
-          <div class="col s12 m12 l12">
-          <div class="card red lighten-1">
-          <div class="card-content center white-text">
-           <h4>          <strong>{{x.name}}: {{x.subject_code}} (Completed in {{x.year_completed}} - Semester {{x.semester}}) </strong> </h4>
-          </div>
-          </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col s6 m6 l6">
-          <div class="card red lighten-1">
-          <div class="card-content center white-text">
-           <h5>Users rated the enjoyability of this subject: <strong>{{x.enjoyability}}</strong> </h5>
-          </div>
-          </div>
-          </div>
-
-          <div class="col s6 m6 l6">
-          <div class="card red lighten-1">
-          <div class="card-content center white-text">
-           <h5>Users rated the difficulty of this subject: <strong>{{x.difficulty}}</strong> </h5>
-          </div>
-          </div>
-          </div>
-        </div>
-
-         <div class="row">
-          <div class="col s12 m12 l12">
-            <div class="card red lighten-1">
-              <div class="card-content center white-text">
-                <h5>Earn bonus points by rating your subjects!</strong> </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-
-         <div class="row">
-    <div class="col s12 m12">
-      <div class="card red lighten-1">
-        <div class="card-content white-text">
-          <span class="card-title">Prescribed Textbook</span>
-          <p>{{x.prescribed_textbook}}</p>
-        </div>
-        <div class="card-action">
-          <a class="white-text" href="{{url_for('sellBook', book_id=x.book_id)}}">Sell Me</a>
-          <a class="white-text" href="#">Lease Me</a>
-          <a class="white-text" href="{{url_for('sellBook', book_id=x.book_id)}}">Buy Me</a>
-        </div>
-      </div>
-    </div>
-  </div>
-      </div>
-      </li>
-    {% endfor %}
-
-  </ul>
+  
 
  </div>
    <div class="row center">

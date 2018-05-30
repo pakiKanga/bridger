@@ -20,10 +20,10 @@ past_subjects = [
    'prescribed_textbook': 'Dummys Guide to Programming',
    'book_id': 1,
    'enjoyability': 4,
-   'difficulty' : 5
+   'difficulty' : 2
  }, {
-   'name': 'Introduction to Programming',
-   'subject_code': 'INFO1110',
+   'name': 'Introduction to Computer Systems',
+   'subject_code': 'ELEC1601',
    'year_completed': 2016,
    'semester': 1,
    'prescribed_textbook': 'Dummys Guide to Programming',
@@ -32,20 +32,20 @@ past_subjects = [
    'enjoyability': 4,
    'difficulty' : 5
  },{
-   'name': 'Introduction to Programming',
-   'subject_code': 'INFO1110',
+   'name': 'Data Structures',
+   'subject_code': 'INFO1105',
    'year_completed': 2016,
    'semester': 1,
-   'prescribed_textbook': 'Dummys Guide to Programming',
+   'prescribed_textbook': 'None Prescribed',
    'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
  }, {
-   'name': 'Introduction to Programming',
-   'subject_code': 'INFO1110',
+   'name': 'Algorithms and Complexity',
+   'subject_code': 'COMP2007',
    'year_completed': 2016,
    'semester': 1,
-   'prescribed_textbook': 'Dummys Guide to Programming',
+   'prescribed_textbook': 'None Prescribed',
    'book_id': 1,
 
    'enjoyability': 4,
@@ -55,39 +55,39 @@ past_subjects = [
 
 curr_subjects = [
  {
-   'name': 'Introduction to Programming',
-   'subject_code': 'INFO1110',
+   'name': 'Graphics and Multimedia',
+   'subject_code': 'COMP3419',
    'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'Dummys Guide to Programming',
+   'prescribed_textbook': 'None Prescribed',
     'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
  },{
-   'name': 'Introduction to Programming',
-   'subject_code': 'INFO1110',
+   'name': 'E-Business',
+   'subject_code': 'ELEC3610',
    'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'Dummys Guide to Programming',
+   'prescribed_textbook': 'None Prescribed',
    'book_id': 1,
 
    'enjoyability': 4,
    'difficulty' : 5
  },{
-   'name': 'Introduction to Programming',
-   'subject_code': 'INFO1110',
+   'name': 'Object Oriented Design',
+   'subject_code': 'INFO3220',
    'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'Dummys Guide to Programming',
+   'prescribed_textbook': 'None Prescribed',
    'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
  },{
-   'name': 'Introduction to Programming',
-   'subject_code': 'INFO1110',
+   'name': 'Project Management',
+   'subject_code': 'INFO3333',
    'semester': 1,
    'year_completed': 2018,
-   'prescribed_textbook': 'Dummys Guide to Programming',
+   'prescribed_textbook': 'None Prescribed',
    'book_id': 1,
    'enjoyability': 4,
    'difficulty' : 5
