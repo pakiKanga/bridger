@@ -68,6 +68,15 @@ $(function () {
       },
     });
 
+		 $('input.search').autocomplete({
+      data: {
+        "Dummys Guide to Programming": null,
+        "A Primer to C++": null,
+        "Design Patterns in Making": null,
+        "Memory Management": null
+      },
+    });
+
 		$('#join_session').on('click', function(event) {
 			var session_id = document.getElementById("session_id").value;
 			window.location.replace(session_id);
