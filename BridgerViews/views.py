@@ -233,7 +233,7 @@ def commitBook():
     books.append(new_book)
     for x in books:
         print(x)
-    return jsonify(dict(redirect='http://127.0.0.1:5000/bookListed'))
+    return jsonify(dict(redirect='http://bridger.pythonanywhere.com/bookListed'))
 
 #Function which generates a random ID of a specific size
 def id_generator(size, chars=string.ascii_uppercase + string.digits):
