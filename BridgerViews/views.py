@@ -6,8 +6,6 @@ import math
 import numpy as np
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for, flash
 from bridger import app, db
-from BridgerViews.models import UserSession
-from locations.models import UserLocation
 import os, datetime, json, random
 
 ID = "AIzaSyD3Grw77GNz2fnPKnU23JWQaoXjeU97iT8"
