@@ -8,7 +8,6 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 from bridger import app, db
 import os, datetime, json, random
 
-ID = "AIzaSyD3Grw77GNz2fnPKnU23JWQaoXjeU97iT8"
 past_subjects = [
  {
    'name': 'Introduction to Programming',
